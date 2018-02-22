@@ -1,6 +1,6 @@
 --- 
 title: "Data Analytics in RStudio"
-author: "Gaurav Satav"
+author: "Gaurav Saav"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
