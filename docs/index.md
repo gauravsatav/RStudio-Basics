@@ -7,8 +7,8 @@ documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: 
-url: 'http\://seankross.com/bookdown-start/'
+github-repo: 'https\://github.com/gauravsatav/RStudio-Basics'
+url: 'https\://github.com/gauravsatav/RStudio-Basics'
 description: "An introduction to kickstarting a data analytics project in R Studio"
 ---
 

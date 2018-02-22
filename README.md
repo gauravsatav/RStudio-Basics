@@ -1,5 +1,6 @@
-This is the absolute minimum you need to start a [bookdown](https://bookdown.org/home/about.html) book. You can find the
-preview of this book at http://seankross.com/bookdown-start/
-
-All of the content of this repository is licensed 
-[CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+---
+title: "Data Analytics in RStudio"
+output: github_document
+---
+This is my attempt at providing a walkthrough of a typical data analysis carried out using RStudios. You can find the
+preview of this book at https://gauravsatav.github.io/RStudio-Basics/index.html
