@@ -1,0 +1,6 @@
+[
+["index.html", "Data Analytics in RStudio Preface", " Data Analytics in RStudio Gaurav Satav 2018-02-22 Preface This is the very first part of the book. "],
+["introduction.html", "Something 1 Introduction", " Something 1 Introduction library(datasets) library(ggplot2) ggplot(mtcars,aes(wt,mpg,color=as.factor(cyl)))+geom_point() "],
+["diving-in.html", "Something 2 Diving In", " Something 2 Diving In Now let’s talk details. "],
+["technical-details.html", "Something 3 Technical Details", " Something 3 Technical Details Now I’ll teach you some crazy math, but I need to work it out first… "]
+]

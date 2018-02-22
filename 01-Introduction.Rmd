@@ -1,0 +1,11 @@
+# Introduction
+
+```{r}
+library(datasets)
+library(ggplot2)
+
+ggplot(mtcars,aes(wt,mpg,color=as.factor(cyl)))+geom_point()
+
+```
+
+
