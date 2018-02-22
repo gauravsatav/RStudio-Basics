@@ -6,20 +6,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Data Analytics in RStudio</title>
-  <meta name="description" content="Everything you need (and nothing more) to start a bookdown book.">
+  <meta name="description" content="An introduction to kickstarting a data analytics project in R Studio">
   <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="Data Analytics in RStudio" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://seankross.com/bookdown-start/" />
   
-  <meta property="og:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta property="og:description" content="An introduction to kickstarting a data analytics project in R Studio" />
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Data Analytics in RStudio" />
   
-  <meta name="twitter:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="twitter:description" content="An introduction to kickstarting a data analytics project in R Studio" />
   
 
 <meta name="author" content="Gaurav Satav">
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="index.html">
-<link rel="next" href="diving-in.html">
+<link rel="next" href="setting-up-a-project.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -100,15 +100,46 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analytics in RStudios</a></li>
+<li><a href="./index.html">Data Analytics in RStudios</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="diving-in.html"><a href="diving-in.html"><i class="fa fa-check"></i><b>2</b> Diving In</a></li>
-<li class="chapter" data-level="3" data-path="technical-details.html"><a href="technical-details.html"><i class="fa fa-check"></i><b>3</b> Technical Details</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-r-language"><i class="fa fa-check"></i><b>1.1</b> The R Language</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#r-studios"><i class="fa fa-check"></i><b>1.2</b> R Studios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="setting-up-a-project.html"><a href="setting-up-a-project.html"><i class="fa fa-check"></i><b>2</b> Setting up a Project</a><ul>
+<li class="chapter" data-level="2.1" data-path="setting-up-a-project.html"><a href="setting-up-a-project.html#github-integration"><i class="fa fa-check"></i><b>2.1</b> Github Integration</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html"><i class="fa fa-check"></i><b>3</b> Preparing the Canvas</a><ul>
+<li class="chapter" data-level="3.1" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html#r-markdown"><i class="fa fa-check"></i><b>3.1</b> R Markdown</a></li>
+<li class="chapter" data-level="3.2" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html#dashboards"><i class="fa fa-check"></i><b>3.2</b> Dashboards</a></li>
+<li class="chapter" data-level="3.3" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html#blog"><i class="fa fa-check"></i><b>3.3</b> Blog</a></li>
+<li class="chapter" data-level="3.4" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html#books"><i class="fa fa-check"></i><b>3.4</b> Books</a></li>
+<li class="chapter" data-level="3.5" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html#web-applications."><i class="fa fa-check"></i><b>3.5</b> Web Applications.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="getting-to-work.html"><a href="getting-to-work.html"><i class="fa fa-check"></i><b>4</b> Getting to work</a><ul>
+<li class="chapter" data-level="4.1" data-path="getting-to-work.html"><a href="getting-to-work.html#once-upon-a-time"><i class="fa fa-check"></i><b>4.1</b> Once upon a time…</a></li>
+<li class="chapter" data-level="4.2" data-path="getting-to-work.html"><a href="getting-to-work.html#load-and-check-data"><i class="fa fa-check"></i><b>4.2</b> Load and check data</a></li>
+<li class="chapter" data-level="4.3" data-path="getting-to-work.html"><a href="getting-to-work.html#feature-engineering"><i class="fa fa-check"></i><b>4.3</b> Feature Engineering</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="getting-to-work.html"><a href="getting-to-work.html#whats-in-a-name"><i class="fa fa-check"></i><b>4.3.1</b> What’s in a name?</a></li>
+<li class="chapter" data-level="4.3.2" data-path="getting-to-work.html"><a href="getting-to-work.html#do-families-sink-or-swim-together"><i class="fa fa-check"></i><b>4.3.2</b> Do families sink or swim together?</a></li>
+<li class="chapter" data-level="4.3.3" data-path="getting-to-work.html"><a href="getting-to-work.html#treat-a-few-more-variables"><i class="fa fa-check"></i><b>4.3.3</b> Treat a few more variables …</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="getting-to-work.html"><a href="getting-to-work.html#missingness"><i class="fa fa-check"></i><b>4.4</b> Missingness</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="getting-to-work.html"><a href="getting-to-work.html#sensible-value-imputation"><i class="fa fa-check"></i><b>4.4.1</b> Sensible value imputation</a></li>
+<li class="chapter" data-level="4.4.2" data-path="getting-to-work.html"><a href="getting-to-work.html#predictive-imputation"><i class="fa fa-check"></i><b>4.4.2</b> Predictive imputation</a></li>
+<li class="chapter" data-level="4.4.3" data-path="getting-to-work.html"><a href="getting-to-work.html#feature-engineering-round-2"><i class="fa fa-check"></i><b>4.4.3</b> Feature Engineering: Round 2</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="getting-to-work.html"><a href="getting-to-work.html#prediction"><i class="fa fa-check"></i><b>4.5</b> Prediction</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="getting-to-work.html"><a href="getting-to-work.html#split-into-training-test-sets"><i class="fa fa-check"></i><b>4.5.1</b> Split into training &amp; test sets</a></li>
+<li class="chapter" data-level="4.5.2" data-path="getting-to-work.html"><a href="getting-to-work.html#building-the-model"><i class="fa fa-check"></i><b>4.5.2</b> Building the model</a></li>
+<li class="chapter" data-level="4.5.3" data-path="getting-to-work.html"><a href="getting-to-work.html#variable-importance"><i class="fa fa-check"></i><b>4.5.3</b> Variable importance</a></li>
+<li class="chapter" data-level="4.5.4" data-path="getting-to-work.html"><a href="getting-to-work.html#prediction-1"><i class="fa fa-check"></i><b>4.5.4</b> Prediction!</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/gauravsatav/RStudio-Basics" target="blank">Fork Me</a></li>
 
 </ul>
 
@@ -128,13 +159,52 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="introduction" class="section level1">
-<h1><span class="header-section-number">Something 1</span> Introduction</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(datasets)
-<span class="kw">library</span>(ggplot2)
+<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<p>Organisations collect data that they have gathered from customers, businesses, economy and practical experience. Data is then processed after gathering and is categorised as per the requirement and analysis is done to study purchase patterns and etc.</p>
+<p>It has always been important to know ones customer and have an understanding of the market one is operating in, but it has only been in recent years that we’ve experience a tremendous acceleration in the rate of data generation.</p>
+<p><img src="01-Introduction_files/figure-html/yesno-1.png" width="672" /></p>
+<p>The idea is to make sense of the data you have, to analyse it and share better business prospects in the near future and how you’re going to do it, is with the concepts of analytics. It is the science of extracting trends, patterns and useful information from a set of existing data which will be of no use if not analysed. It is a kind of business intelligence that is now used for gaining profits and making better use of resources. This can also help in improving managerial operations and leverage organisations to next level.</p>
+<p>If not analysed this data is going to get wasted whereas if analysed properly this data can help us in finding information that is powerful to bring in a change in the patterns of how business is already working or going.</p>
 
-<span class="kw">ggplot</span>(mtcars,<span class="kw">aes</span>(wt,mpg,<span class="dt">color=</span><span class="kw">as.factor</span>(cyl)))<span class="op">+</span><span class="kw">geom_point</span>()</code></pre></div>
-<p><img src="01-Introduction_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div id="the-r-language" class="section level2">
+<h2><span class="header-section-number">1.1</span> The R Language</h2>
+<p>R is a free software environment for statistical computing and graphics. It compiles and runs on a wide variety of UNIX platforms, Windows and MacOS.</p>
+<p><strong>The R environment</strong></p>
+<p>R is an integrated suite of software facilities for data manipulation, calculation and graphical display. Among other things it has</p>
+<ul>
+<li>an effective data handling and storage facility,</li>
+<li>a suite of operators for calculations on arrays, in particular matrices,</li>
+<li>a large, coherent, integrated collection of intermediate tools for data analysis,</li>
+<li>graphical facilities for data analysis and display either directly at the computer or on hardcopy, and</li>
+<li>a well developed, simple and effective programming language (called ‘S’) which includes conditionals, loops, user defined recursive functions and input and output facilities. (Indeed most of the system supplied functions are themselves written in the S language.)</li>
+</ul>
+<p>The term “environment” is intended to characterize it as a fully planned and coherent system, rather than an incremental accretion of very specific and inflexible tools, as is frequently the case with other data analysis software.</p>
+<p>R is very much a vehicle for newly developing methods of interactive data analysis. It has developed rapidly, and has been extended by a large collection of packages. However, most programs written in R are essentially ephemeral, written for a single piece of data analysis.</p>
+<p>You can get yourself aquainted with the basics of R by visiting this <a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.html">link</a></p>
+<p>You can download R by clicking the <a href="https://cran.r-project.org/">link here</a>.</p>
 
+</div>
+<div id="r-studios" class="section level2">
+<h2><span class="header-section-number">1.2</span> R Studios</h2>
+<p>RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management.</p>
+<p>RStudio is available in open source and commercial editions and runs on the desktop (Windows, Mac, and Linux) or in a browser connected to RStudio Server or RStudio Server Pro (Debian/Ubuntu, RedHat/CentOS, and SUSE Linux).</p>
+<div class="figure">
+<img src="images/RStudio-Screenshot.png" />
+
+</div>
+<p><strong>Downloading R Studios</strong></p>
+<ul>
+<li>Before downloading R Studios make sure you have R installed on your system. If not the refer the previous page for the link</li>
+</ul>
+<p>Basically there are two version of RStudio ( <a href="https://support.rstudio.com/hc/en-us/articles/217799198-What-is-the-difference-between-RStudio-Desktop-and-RStudio-Server-">whats the difference?</a> )</p>
+<ul>
+<li><p>Desktop Version</p></li>
+<li><p>Server Version</p></li>
+</ul>
+<p>We recommend installation of the server version or R Studio and once its installed we can access it using our browser at port 8787</p>
+<p>Click here to <a href="https://www.rstudio.com/products/rstudio/download-server/">install R Studio</a> for linux.</p>
+
+</div>
 </div>
             </section>
 
@@ -142,7 +212,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="diving-in.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="setting-up-a-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -175,7 +245,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["bookdown-start.epub"],
 "toc": {
 "collapse": "subsection"
 }

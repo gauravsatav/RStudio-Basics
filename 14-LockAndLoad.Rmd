@@ -1,0 +1,42 @@
+## Load and check data
+
+```{r message=FALSE, warning=FALSE}
+# Load packages
+
+# Base Package
+library('base')
+
+# Visualization
+library('ggplot2')
+library('ggthemes')
+library('scales')
+
+# Data Manipulation
+library('dplyr') 
+
+# Imputation
+library('mice') 
+
+# Classification algorithm
+library('randomForest') 
+```
+
+Now that our packages are loaded, let’s read in and take a peek at the data.
+
+```{r}
+train <- read.csv('./input/train.csv', stringsAsFactors = F)
+test  <- read.csv('./input/test.csv', stringsAsFactors = F)
+
+full  <- bind_rows(train, test) # bind training & test data
+
+# check data
+str(full)
+```
+
+We’ve got a sense of our variables, their class type, and the first few observations of each. We know we’re working with 1309 observations of 12 variables. To make things a bit more explicit since a couple of the variable names aren’t 100% illuminating, here’s what we’ve got to deal with:
+
+
+```{r include=FALSE}
+save(list=ls(),file = ".RData")
+```
+

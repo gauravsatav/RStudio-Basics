@@ -1,0 +1,12 @@
+
+## Web Applications.
+
+Shiny is an R package that makes it easy to build interactive web applications (apps) straight from R. 
+
+A simple example of the application is seen [here](https://gauravsatav.shinyapps.io/WebApp/)
+
+This application is hosted on the <https://www.shinyapps.io/> server [.](https://www.shinyapps.io/admin/#/application/239302)
+
+**Additional Resources**
+
+- [Learn Shiny](https://shiny.rstudio.com/tutorial/)

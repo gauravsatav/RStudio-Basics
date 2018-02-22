@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Analytics in RStudio</title>
+  <meta name="description" content="An introduction to kickstarting a data analytics project in R Studio">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Analytics in RStudio" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://seankross.com/bookdown-start/" />
+  
+  <meta property="og:description" content="An introduction to kickstarting a data analytics project in R Studio" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Analytics in RStudio" />
+  
+  <meta name="twitter:description" content="An introduction to kickstarting a data analytics project in R Studio" />
+  
+
+<meta name="author" content="Gaurav Satav">
+
+
+<meta name="date" content="2018-02-22">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="setting-up-a-project.html">
+<link rel="next" href="getting-to-work.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">Data Analytics in RStudios</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-r-language"><i class="fa fa-check"></i><b>1.1</b> The R Language</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#r-studios"><i class="fa fa-check"></i><b>1.2</b> R Studios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="setting-up-a-project.html"><a href="setting-up-a-project.html"><i class="fa fa-check"></i><b>2</b> Setting up a Project</a><ul>
+<li class="chapter" data-level="2.1" data-path="setting-up-a-project.html"><a href="setting-up-a-project.html#github-integration"><i class="fa fa-check"></i><b>2.1</b> Github Integration</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html"><i class="fa fa-check"></i><b>3</b> Preparing the Canvas</a><ul>
+<li class="chapter" data-level="3.1" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html#r-markdown"><i class="fa fa-check"></i><b>3.1</b> R Markdown</a></li>
+<li class="chapter" data-level="3.2" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html#dashboards"><i class="fa fa-check"></i><b>3.2</b> Dashboards</a></li>
+<li class="chapter" data-level="3.3" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html#blog"><i class="fa fa-check"></i><b>3.3</b> Blog</a></li>
+<li class="chapter" data-level="3.4" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html#books"><i class="fa fa-check"></i><b>3.4</b> Books</a></li>
+<li class="chapter" data-level="3.5" data-path="preparing-the-canvas.html"><a href="preparing-the-canvas.html#web-applications."><i class="fa fa-check"></i><b>3.5</b> Web Applications.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="getting-to-work.html"><a href="getting-to-work.html"><i class="fa fa-check"></i><b>4</b> Getting to work</a><ul>
+<li class="chapter" data-level="4.1" data-path="getting-to-work.html"><a href="getting-to-work.html#once-upon-a-time"><i class="fa fa-check"></i><b>4.1</b> Once upon a time…</a></li>
+<li class="chapter" data-level="4.2" data-path="getting-to-work.html"><a href="getting-to-work.html#load-and-check-data"><i class="fa fa-check"></i><b>4.2</b> Load and check data</a></li>
+<li class="chapter" data-level="4.3" data-path="getting-to-work.html"><a href="getting-to-work.html#feature-engineering"><i class="fa fa-check"></i><b>4.3</b> Feature Engineering</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="getting-to-work.html"><a href="getting-to-work.html#whats-in-a-name"><i class="fa fa-check"></i><b>4.3.1</b> What’s in a name?</a></li>
+<li class="chapter" data-level="4.3.2" data-path="getting-to-work.html"><a href="getting-to-work.html#do-families-sink-or-swim-together"><i class="fa fa-check"></i><b>4.3.2</b> Do families sink or swim together?</a></li>
+<li class="chapter" data-level="4.3.3" data-path="getting-to-work.html"><a href="getting-to-work.html#treat-a-few-more-variables"><i class="fa fa-check"></i><b>4.3.3</b> Treat a few more variables …</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="getting-to-work.html"><a href="getting-to-work.html#missingness"><i class="fa fa-check"></i><b>4.4</b> Missingness</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="getting-to-work.html"><a href="getting-to-work.html#sensible-value-imputation"><i class="fa fa-check"></i><b>4.4.1</b> Sensible value imputation</a></li>
+<li class="chapter" data-level="4.4.2" data-path="getting-to-work.html"><a href="getting-to-work.html#predictive-imputation"><i class="fa fa-check"></i><b>4.4.2</b> Predictive imputation</a></li>
+<li class="chapter" data-level="4.4.3" data-path="getting-to-work.html"><a href="getting-to-work.html#feature-engineering-round-2"><i class="fa fa-check"></i><b>4.4.3</b> Feature Engineering: Round 2</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="getting-to-work.html"><a href="getting-to-work.html#prediction"><i class="fa fa-check"></i><b>4.5</b> Prediction</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="getting-to-work.html"><a href="getting-to-work.html#split-into-training-test-sets"><i class="fa fa-check"></i><b>4.5.1</b> Split into training &amp; test sets</a></li>
+<li class="chapter" data-level="4.5.2" data-path="getting-to-work.html"><a href="getting-to-work.html#building-the-model"><i class="fa fa-check"></i><b>4.5.2</b> Building the model</a></li>
+<li class="chapter" data-level="4.5.3" data-path="getting-to-work.html"><a href="getting-to-work.html#variable-importance"><i class="fa fa-check"></i><b>4.5.3</b> Variable importance</a></li>
+<li class="chapter" data-level="4.5.4" data-path="getting-to-work.html"><a href="getting-to-work.html#prediction-1"><i class="fa fa-check"></i><b>4.5.4</b> Prediction!</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/gauravsatav/RStudio-Basics" target="blank">Fork Me</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analytics in RStudio</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="preparing-the-canvas" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Preparing the Canvas</h1>
+<p>Consider the following scenario, you are asked to perform analysis on some data, we would all agree that it would be a tedious task to complete our analysis using the command line interface. The RStudio IDE (or any IDE for that matter) provides us with the freedom to reproduce the execution of our code sequentially to be executed on someone else along with host of other important advantage.</p>
+<p>Now as it happens at the end of most analysis we are required to produce a report to be shared. This report in general takes one of the following forms.</p>
+<ul>
+<li>A Spreadsheet.</li>
+<li>A text document.</li>
+<li>A powerpoint presentation.</li>
+</ul>
+<p>thinking on similar lines as we did while comparing the <em>CMD line</em> to a <em>text editor</em> we see that it would really be a tedious job to produce reports especially if the reports are going to be repetative and similar in nature.Before we start writing a single line of code, I encourage you to ask yourself, <em>what is my output file format going to be ?</em>.</p>
+<p><strong>Beginning at the end.</strong></p>
+<p>R Studio provides us with the following (along with many other) output formats in which we can share our analysis.</p>
+<ul>
+<li>R Markdown</li>
+<li>Dashboards</li>
+<li>Web Pages (Blogs and Books)</li>
+<li>Web Applications</li>
+</ul>
+<p>We’ll skim on the surface of each of these output formats in the following chapters.</p>
+
+<div id="r-markdown" class="section level2">
+<h2><span class="header-section-number">3.1</span> R Markdown</h2>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(cars)</code></pre></div>
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00</code></pre>
+<div id="including-plots" class="section level4">
+<h4><span class="header-section-number">3.1.0.1</span> Including Plots</h4>
+<p>You can also embed plots, for example:</p>
+<p><img src="07-RMarkdown_files/figure-html/pressure-1.png" width="672" /></p>
+<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+
+</div>
+</div>
+<div id="dashboards" class="section level2">
+<h2><span class="header-section-number">3.2</span> Dashboards</h2>
+<p>Dashboards are a great tool to represent live data or data in forms of reports. The <a href="http://rmarkdown.rstudio.com/flexdashboard/"><code>flexdashboard</code></a> library allows us to do just that. It enables you to easily create flexible, attractive, interactive dashboards with R. Authoring and customization of dashboards is done using <a href="http://rmarkdown.rstudio.com/">R Markdown</a> and you can optionally include <a href="http://shiny.rstudio.com/">Shiny</a>(more on it later) components for additional interactivity.</p>
+<p>Highlights of the flexdashboard package include:</p>
+<ul>
+<li><p>Support for a wide variety of components including interactive htmlwidgets; base, lattice, and grid graphics; tabular data; gauges; and value boxes.</p></li>
+<li><p>Flexible and easy to specify row and column-based layouts. Components are intelligently re-sized to fill the browser and adapted for display on mobile devices.</p></li>
+<li><p>Extensive support for text annotations to include assumptions, contextual narrative, and analysis within dashboards.</p></li>
+<li><p>Storyboard layouts for presenting sequences of visualizations and related commentary.</p></li>
+<li><p>By default dashboards are standard HTML documents that can be deployed on any web server or even attached to an email message. You can optionally add Shiny components for additional interactivity and then deploy on Shiny Server or shinyapps.io.</p></li>
+</ul>
+<p>You can explore the gallery of the dashboards at <a href="https://rmarkdown.rstudio.com/flexdashboard/examples.html" class="uri">https://rmarkdown.rstudio.com/flexdashboard/examples.html</a></p>
+<p>Additional learning resource is <a href="https://blog.rstudio.com/2016/05/17/flexdashboard-easy-interactive-dashboards-for-r/">here</a></p>
+
+</div>
+<div id="blog" class="section level2">
+<h2><span class="header-section-number">3.3</span> Blog</h2>
+<p>It so often happens that we continue to learn new things and and more often than not, forget them due to one reason or the other. Maintaining a blog helps us to write in our own words what it is that we’ve learned and also it can help you showcase your knowledge to someone when asked upon.</p>
+<p><strong>Blogdown</strong> is an awesome tool developed by Yihui Xi which makes our lives a whole lot easier to create, maintain and update our own blog. Its a bit of a trouble at start, but once you get going you come to see its effectiveness.</p>
+<p>Once we create our blog we can then choose to host it either on Github Pages or on Netlify.</p>
+<p><strong>Additional Resources</strong></p>
+<ul>
+<li><a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a></li>
+<li><a href="https://tclavelle.github.io/blog/blogdown_github/">Building a blog with blogdown</a></li>
+</ul>
+
+</div>
+<div id="books" class="section level2">
+<h2><span class="header-section-number">3.4</span> Books</h2>
+<p>Similar to the <code>blogdown</code> package, <code>bookdown</code> as the name suggest is used for writing books. The book you’re currently reading was written using the same package.</p>
+<p><strong>Additional Resources</strong> - <a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a></p>
+
+</div>
+<div id="web-applications." class="section level2">
+<h2><span class="header-section-number">3.5</span> Web Applications.</h2>
+<p>Shiny is an R package that makes it easy to build interactive web applications (apps) straight from R.</p>
+<p>A simple example of the application is seen <a href="https://gauravsatav.shinyapps.io/WebApp/">here</a></p>
+<p>This application is hosted on the <a href="https://www.shinyapps.io/" class="uri">https://www.shinyapps.io/</a> server <a href="https://www.shinyapps.io/admin/#/application/239302">.</a></p>
+<p><strong>Additional Resources</strong></p>
+<ul>
+<li><a href="https://shiny.rstudio.com/tutorial/">Learn Shiny</a></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="setting-up-a-project.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="getting-to-work.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-start.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

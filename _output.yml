@@ -5,9 +5,9 @@ bookdown::gitbook:
     toc:
       collapse: subsection
       before: |
-        <li><a href="./">Data Analytics in RStudios</a></li>
+        <li><a href="./index.html">Data Analytics in RStudios</a></li>
       after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        <li><a href="https://github.com/gauravsatav/RStudio-Basics" target="blank">Fork Me</a></li>
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

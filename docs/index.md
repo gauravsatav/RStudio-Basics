@@ -9,9 +9,9 @@ biblio-style: apalike
 link-citations: yes
 github-repo: 
 url: 'http\://seankross.com/bookdown-start/'
-description: "Everything you need (and nothing more) to start a bookdown book."
+description: "An introduction to kickstarting a data analytics project in R Studio"
 ---
 
 # Preface {-}
 
-This is the very first part of the book.
+This document is an attempt to provide the reader with a walkthrough into how a typical analysis is carried out using R Studios.
