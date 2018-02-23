@@ -27,3 +27,8 @@ You can also embed plots, for example:
 <img src="07-RMarkdown_files/figure-html/pressure-1.png" width="672" />
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+**All in all R Markdown makes your code look awesome**
+
+![](./images/dino.gif)

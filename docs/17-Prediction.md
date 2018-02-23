@@ -37,7 +37,7 @@ legend('topright', colnames(rf_model$err.rate), col=1:3, fill=1:3)
 
 <img src="17-Prediction_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
-The black line shows the overall error rate which falls below 20%. The red and green lines show the error rate for ‘died’ and ‘survived’ respectively. We can see that right now we’re much more successful predicting death than we are survival. What does that say about me, I wonder?
+The black line shows the overall error rate which falls below 20%. The red and green lines show the error rate for ‘died’ and ‘survived’ respectively. We can see that right now we’re much more successful predicting death than we are survival.
 
 
 ### Variable importance
@@ -90,3 +90,7 @@ write.csv(solution, file = 'rf_mod_Solution.csv', row.names = F)
 
 
 
+
+**Thats all folks !**
+
+![](./images/thankyou.gif)

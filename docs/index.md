@@ -1,7 +1,7 @@
 --- 
 title: "Data Analytics in RStudio"
 author: "Gaurav Satav"
-date: "2018-02-22"
+date: "2018-02-23"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]

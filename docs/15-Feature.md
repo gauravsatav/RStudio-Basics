@@ -102,6 +102,7 @@ mosaicplot(table(full$FsizeD, full$Survived), main='Family Size by Survival', sh
 ```
 
 <img src="15-Feature_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+
 The mosaic plot shows that we preserve our rule that there’s a survival penalty among singletons and large families, but a benefit for passengers in small families. I want to do something further with our age variable, but 263 rows have missing age values, so we will have to wait until after we address missingness.
 
 ### Treat a few more variables …

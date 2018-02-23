@@ -1,5 +1,9 @@
 # Introduction
 
+**Lets take a Moment**
+
+![](./images/VideoChat.jpg)
+
 Organisations collect data that they have gathered from customers, businesses, economy and practical experience. Data is then processed after gathering and is categorised as per the requirement and analysis is done to study purchase patterns and etc.
 
 It has always been important to know ones customer and have an understanding of the market one is operating in, but it has only been in recent years that we've experience a tremendous acceleration in the rate of data generation. 

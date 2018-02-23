@@ -17,9 +17,7 @@ full[c(62, 830), 'Embarked']
 ```
 
 
-```
-## We will infer their values for **embarkment** based on present data that we can imagine may be relevant: **passenger class** and **fare**. We see that they paid<b> $ 80 </b>and<b> $ NA </b>respectively and their classes are<b> 1 </b>and<b> NA </b>. So from where did they embark?
-```
+We will infer their values for **embarkment** based on present data that we can imagine may be relevant: **passenger class** and **fare**. We see that they paid 80,and NA, respectively and their classes are, 1, and NA. So from where did they embark?
 
 
 ```r
@@ -36,7 +34,8 @@ ggplot(embark_fare, aes(x = Embarked, y = Fare, fill = factor(Pclass))) +
   theme_few()
 ```
 
-<img src="16-Missingness_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+<img src="16-Missingness_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+
 Voilà! The median fare for a first class passenger departing from Charbourg (‘C’) coincides nicely with the $80 paid by our embarkment-deficient passengers. I think we can safely replace the NA values with ‘C’.
 
 
@@ -76,7 +75,7 @@ ggplot(full[full$Pclass == '3' & full$Embarked == 'S', ],
   theme_few()
 ```
 
-<img src="16-Missingness_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="16-Missingness_files/figure-html/unnamed-chunk-6-1.png" width="672" />
 
 
 From this visualization, it seems quite reasonable to replace the NA Fare value with median for their class and embarkment which is $8.05.
@@ -102,7 +101,7 @@ sum(is.na(full$Age))
 ## [1] 263
 ```
 
-We could definitely use rpart (recursive partitioning for regression) to predict missing ages, but I’m going to use the mice package for this task just for something different. You can read more about multiple imputation using chained equations in r here (PDF). Since we haven’t done it yet, I’ll first factorize the factor variables and then perform mice imputation.
+We could definitely use rpart (recursive partitioning for regression) to predict missing ages, but I’m going to use the mice package for this task just for something different. You can read more about multiple imputation using chained equations in r [here](http://www.jstatsoft.org/article/view/v045i03/v45i03.pdf) (PDF). Since we haven’t done it yet, I’ll first factorize the factor variables and then perform mice imputation.
 
 
 ```r
@@ -168,7 +167,7 @@ hist(mice_output$Age, freq=F, main='Age: MICE Output',
   col='lightgreen', ylim=c(0,0.04))
 ```
 
-<img src="16-Missingness_files/figure-html/unnamed-chunk-12-1.png" width="672" />
+<img src="16-Missingness_files/figure-html/unnamed-chunk-11-1.png" width="672" />
 
 Things look good, so let’s replace our age vector in the original data with the output from the mice model.
 
@@ -189,7 +188,11 @@ We’ve finished imputing values for all variables that we care about for now! N
 
 ### Feature Engineering: Round 2
 
-Now that we know everyone’s age, we can create a couple of new age-dependent variables: Child and Mother. A child will simply be someone under 18 years of age and a mother is a passenger who is 1) female, 2) is over 18, 3) has more than 0 children (no kidding!), and 4) does not have the title ‘Miss’.
+Now that we know everyone’s age, we can create a couple of new age-dependent variables: Child and Mother. A child will simply be someone under 18 years of age and a mother is a passenger who is 
+- female
+- over 18
+- has more than 0 children (no kidding!)
+- does not have the title ‘Miss’.
 
 
 ```r
@@ -201,7 +204,7 @@ ggplot(full[1:891,], aes(Age, fill = factor(Survived))) +
   theme_few()
 ```
 
-<img src="16-Missingness_files/figure-html/unnamed-chunk-14-1.png" width="672" />
+<img src="16-Missingness_files/figure-html/unnamed-chunk-13-1.png" width="672" />
 
 
 
