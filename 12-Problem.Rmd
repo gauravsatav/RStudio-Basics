@@ -4,4 +4,6 @@ There is a problem hosted on [Kaggle](https://www.kaggle.com/) (a platform which
 
 In this competitions, we are asked to predict whether a given set passenger survived or died in the sinking of RMS Titanic.
 
-We'll now start our walkthrough. All credits for the 
+We'll now start our walkthrough. 
+
+All credits for the below solution goes to [Megan Risdal](https://www.kaggle.com/mrisdal), you can look up the original post [here](https://www.kaggle.com/mrisdal/exploring-survival-on-the-titanic)

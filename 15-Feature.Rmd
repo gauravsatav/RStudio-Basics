@@ -94,6 +94,7 @@ full$FsizeD[full$Fsize > 4] <- 'large'
 # Show family size by survival using a mosaic plot
 mosaicplot(table(full$FsizeD, full$Survived), main='Family Size by Survival', shade=TRUE)
 ```
+
 The mosaic plot shows that we preserve our rule that there’s a survival penalty among singletons and large families, but a benefit for passengers in small families. I want to do something further with our age variable, but 263 rows have missing age values, so we will have to wait until after we address missingness.
 
 ### Treat a few more variables …
