@@ -25,7 +25,7 @@
 <meta name="author" content="Gaurav Satav">
 
 
-<meta name="date" content="2018-02-23">
+<meta name="date" content="2018-06-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -396,6 +396,7 @@ mice_mod &lt;-<span class="st"> </span><span class="kw">mice</span>(full[, <span
 ##   5   3  Age  Deck
 ##   5   4  Age  Deck
 ##   5   5  Age  Deck</code></pre>
+<pre><code>## Warning: Number of logged events: 50</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Save the complete output </span>
 mice_output &lt;-<span class="st"> </span><span class="kw">complete</span>(mice_mod)</code></pre></div>
 <p>Let’s compare the results we get with the original distribution of passenger ages to ensure that nothing has gone completely awry.</p>
@@ -433,8 +434,8 @@ full<span class="op">$</span>Child[full<span class="op">$</span>Age <span class=
 <span class="kw">table</span>(full<span class="op">$</span>Child, full<span class="op">$</span>Survived)</code></pre></div>
 <pre><code>##        
 ##           0   1
-##   Adult 484 274
-##   Child  65  68</code></pre>
+##   Adult 481 272
+##   Child  68  70</code></pre>
 <p>Looks like being a child doesn’t hurt, but it’s not going to necessarily save you either! We will finish off our feature engineering by creating the Mother variable. Maybe we can hope that mothers are more likely to have survived on the Titanic.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Adding Mother variable</span>
 full<span class="op">$</span>Mother &lt;-<span class="st"> &#39;Not Mother&#39;</span>
@@ -451,31 +452,19 @@ full<span class="op">$</span>Child  &lt;-<span class="st"> </span><span class="k
 full<span class="op">$</span>Mother &lt;-<span class="st"> </span><span class="kw">factor</span>(full<span class="op">$</span>Mother)</code></pre></div>
 <p>All of the variables we care about should be taken care of and there should be no missing data. I’m going to double check just to be sure:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">md.pattern</span>(full)</code></pre></div>
-<pre><code>## Warning in data.matrix(x): NAs introduced by coercion
-
-## Warning in data.matrix(x): NAs introduced by coercion
-
-## Warning in data.matrix(x): NAs introduced by coercion</code></pre>
-<pre><code>##     PassengerId Pclass Sex Age SibSp Parch Fare Embarked Title Surname
-## 150           1      1   1   1     1     1    1        1     1       1
-##  61           1      1   1   1     1     1    1        1     1       1
-##  54           1      1   1   1     1     1    1        1     1       1
-## 511           1      1   1   1     1     1    1        1     1       1
-##  30           1      1   1   1     1     1    1        1     1       1
-## 235           1      1   1   1     1     1    1        1     1       1
-## 176           1      1   1   1     1     1    1        1     1       1
-##  92           1      1   1   1     1     1    1        1     1       1
-##               0      0   0   0     0     0    0        0     0       0
-##     Fsize Family FsizeD Child Mother Ticket Survived Deck Name Cabin     
-## 150     1      1      1     1      1      1        1    1    0     0    2
-##  61     1      1      1     1      1      1        0    1    0     0    3
-##  54     1      1      1     1      1      0        1    1    0     0    3
-## 511     1      1      1     1      1      1        1    0    0     0    3
-##  30     1      1      1     1      1      0        0    1    0     0    4
-## 235     1      1      1     1      1      1        0    0    0     0    4
-## 176     1      1      1     1      1      0        1    0    0     0    4
-##  92     1      1      1     1      1      0        0    0    0     0    5
-##         0      0      0     0      0    352      418 1014 1309  1309 4402</code></pre>
+<p><img src="16-Missingness_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<pre><code>##     PassengerId Pclass Name Sex Age SibSp Parch Ticket Fare Cabin Embarked
+## 204           1      1    1   1   1     1     1      1    1     1        1
+## 687           1      1    1   1   1     1     1      1    1     1        1
+## 91            1      1    1   1   1     1     1      1    1     1        1
+## 327           1      1    1   1   1     1     1      1    1     1        1
+##               0      0    0   0   0     0     0      0    0     0        0
+##     Title Surname Fsize Family FsizeD Child Mother Survived Deck     
+## 204     1       1     1      1      1     1      1        1    1    0
+## 687     1       1     1      1      1     1      1        1    0    1
+## 91      1       1     1      1      1     1      1        0    1    1
+## 327     1       1     1      1      1     1      1        0    0    2
+##         0       0     0      0      0     0      0      418 1014 1432</code></pre>
 <p>Wow! We have finally finished treating all of the relevant missing values in the Titanic dataset which has included some fancy imputation with mice. We have also successfully created several new variables which we hope will help us build a model which reliably predicts survival.</p>
 
 </div>

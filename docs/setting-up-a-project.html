@@ -25,7 +25,7 @@
 <meta name="author" content="Gaurav Satav">
 
 
-<meta name="date" content="2018-02-23">
+<meta name="date" content="2018-06-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -171,7 +171,29 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">2.1</span> Github Integration</h2>
 <p>Version control helps software teams manage changes to source code over time. Version control software keeps track of every modification to the code in a special kind of database. If a mistake is made, developers can turn back the clock and compare earlier versions of the code to help fix the mistake while minimizing disruption to all team members. Version control systems have been around for a long time but continue to increase in popularity with data science workflows.</p>
 <p>The RStudio IDE has integrated support for version control which would help us keep track of our changes and push them onto Github.</p>
+<p>We’ll now quickly look at how to setup a git version controlling environment within R Studio.</p>
+<ul>
+<li><p><strong>Create an account on github</strong> : First you’ll need to <a href="https://github.com/join">create an account</a> on github.</p></li>
+<li><p><strong>Create a repository</strong> : Once you’re done creating an account, click on the <code>New Repository</code> option and create a repository there. Generally the name of the repository is the name of the project.</p></li>
+<li><p><strong>Download and install git locally</strong> : Now you’ll need to install git locally on your machine. You can download it from the <a href="https://git-scm.com/downloads">official git website</a></p></li>
+<li><p><strong>Update <em>Global Options</em> in R Studio</strong> : Once you’ve installed git, navigate to the <strong>Tools</strong> –&gt; <strong>Global Options</strong> –&gt; <strong>GIT/SVN</strong> options and within the <em>Git Executable</em> provide the link to git executable file and of the SVN path.(by default it will be C:/Program Files/Git/bin/git.exe and C:/Users/<strong>user_name</strong>/Documents respectively)</p></li>
+<li><p><strong>Clone Github Repository</strong> : Now within your filesystem, navigate to a new repository and type the following command</p></li>
+</ul>
+<p><code>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git</code></p>
+<ul>
+<li><p><strong>Initialize the current directory with a R Project</strong> : In R Studio, navigate to the New Project option and choose the <em>Existing Directory</em> option to make the curret git directory as your project directory.</p></li>
+<li><p><strong>Check git origin</strong> : Ensure that the name of the origin path is set correctly. Type the below command in cmd prompt.</p></li>
+</ul>
+<p><code>git remote show origin</code></p>
+<ul>
+<li><strong>Make changes,commit and push</strong> : Now you can try making changes into the repository by either adding new files or modifying the existing README file. To commit all the changes, type</li>
+</ul>
+<p><code>git add -A</code> <code>git commit -m &quot;A commit from my local computer&quot;</code> <code>git push</code></p>
+<p>At this point you’ll be asked to enter your github username and password. Once you’ve entered that the changes which you’ve made in this commit will get pushed onto the github repository.</p>
 <p><strong>Additional Resource</strong> - <a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN">Using Version Control with RStudio</a></p>
+<ul>
+<li><a href="http://happygitwithr.com/">Happy Git and GitHub for the userR</a></li>
+</ul>
 
 </div>
 </div>

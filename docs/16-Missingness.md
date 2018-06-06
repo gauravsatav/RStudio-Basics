@@ -148,6 +148,10 @@ mice_mod <- mice(full[, !names(full) %in% c('PassengerId','Name','Ticket','Cabin
 ##   5   5  Age  Deck
 ```
 
+```
+## Warning: Number of logged events: 50
+```
+
 
 
 ```r
@@ -220,8 +224,8 @@ table(full$Child, full$Survived)
 ```
 ##        
 ##           0   1
-##   Adult 484 274
-##   Child  65  68
+##   Adult 481 272
+##   Child  68  70
 ```
 
 Looks like being a child doesn’t hurt, but it’s not going to necessarily save you either! We will finish off our feature engineering by creating the Mother variable. Maybe we can hope that mothers are more likely to have survived on the Titanic.
@@ -259,35 +263,21 @@ All of the variables we care about should be taken care of and there should be n
 md.pattern(full)
 ```
 
-```
-## Warning in data.matrix(x): NAs introduced by coercion
-
-## Warning in data.matrix(x): NAs introduced by coercion
-
-## Warning in data.matrix(x): NAs introduced by coercion
-```
+<img src="16-Missingness_files/figure-html/unnamed-chunk-17-1.png" width="672" />
 
 ```
-##     PassengerId Pclass Sex Age SibSp Parch Fare Embarked Title Surname
-## 150           1      1   1   1     1     1    1        1     1       1
-##  61           1      1   1   1     1     1    1        1     1       1
-##  54           1      1   1   1     1     1    1        1     1       1
-## 511           1      1   1   1     1     1    1        1     1       1
-##  30           1      1   1   1     1     1    1        1     1       1
-## 235           1      1   1   1     1     1    1        1     1       1
-## 176           1      1   1   1     1     1    1        1     1       1
-##  92           1      1   1   1     1     1    1        1     1       1
-##               0      0   0   0     0     0    0        0     0       0
-##     Fsize Family FsizeD Child Mother Ticket Survived Deck Name Cabin     
-## 150     1      1      1     1      1      1        1    1    0     0    2
-##  61     1      1      1     1      1      1        0    1    0     0    3
-##  54     1      1      1     1      1      0        1    1    0     0    3
-## 511     1      1      1     1      1      1        1    0    0     0    3
-##  30     1      1      1     1      1      0        0    1    0     0    4
-## 235     1      1      1     1      1      1        0    0    0     0    4
-## 176     1      1      1     1      1      0        1    0    0     0    4
-##  92     1      1      1     1      1      0        0    0    0     0    5
-##         0      0      0     0      0    352      418 1014 1309  1309 4402
+##     PassengerId Pclass Name Sex Age SibSp Parch Ticket Fare Cabin Embarked
+## 204           1      1    1   1   1     1     1      1    1     1        1
+## 687           1      1    1   1   1     1     1      1    1     1        1
+## 91            1      1    1   1   1     1     1      1    1     1        1
+## 327           1      1    1   1   1     1     1      1    1     1        1
+##               0      0    0   0   0     0     0      0    0     0        0
+##     Title Surname Fsize Family FsizeD Child Mother Survived Deck     
+## 204     1       1     1      1      1     1      1        1    1    0
+## 687     1       1     1      1      1     1      1        1    0    1
+## 91      1       1     1      1      1     1      1        0    1    1
+## 327     1       1     1      1      1     1      1        0    0    2
+##         0       0     0      0      0     0      0      418 1014 1432
 ```
 
 Wow! We have finally finished treating all of the relevant missing values in the Titanic dataset which has included some fancy imputation with mice. We have also successfully created several new variables which we hope will help us build a model which reliably predicts survival.
