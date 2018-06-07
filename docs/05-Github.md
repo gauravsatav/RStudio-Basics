@@ -27,7 +27,11 @@ We'll now quickly look at how to setup a git version controlling environment wit
 - **Make changes,commit and push** : Now you can try making changes into the repository by either adding new files or modifying the existing README file. To commit all the changes, type
 
 `git add -A`
+
+
 `git commit -m "A commit from my local computer"`
+
+
 `git push`
 
 At this point you'll be asked to enter your github username and password. Once you've entered that the changes which you've made in this commit will get pushed onto the github repository.
@@ -35,6 +39,8 @@ At this point you'll be asked to enter your github username and password. Once y
 
 
 **Additional Resource**
+
+
 - [Using Version Control with RStudio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
 
 - [Happy Git and GitHub for the userR](http://happygitwithr.com/)
